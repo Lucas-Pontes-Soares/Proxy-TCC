@@ -9,7 +9,7 @@ dotenv.config();
 const port = 4000
 
 const corsOptions ={
-   origin:'https://gplink-aj6y.onrender.com', 
+   origin:'*', 
    credentials:true,            //access-control-allow-credentials:true
    optionSuccessStatus:200,
 }
