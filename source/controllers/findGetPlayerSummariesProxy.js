@@ -3,7 +3,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 module.exports = findGetPlayerSummariesProxy = async(req, res) => {
-    const steamId = req.params.steamId
+    const steamId = req.params.UserId
 
     try {
         let dados = await fetch(`${process.env.URLBackend}/steam/findGetPlayerSummaries/UserId/${steamId}/`, {
