@@ -13,7 +13,7 @@ module.exports = findGetPlayerSummariesProxy = async(req, res) => {
                 },
         }) 
         dados = await dados.json()
-        res.json({success: false, message: dados});
+        res.json({success: true, message: dados});
     } catch (error) {
         console.log("erro " + error)
     }

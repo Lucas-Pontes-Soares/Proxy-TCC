@@ -10,13 +10,12 @@ const port = 4000
 
 const corsOptions ={
    origin:'*', 
-   credentials:true,            //access-control-allow-credentials:true
+   credentials:true,           
    optionSuccessStatus:200,
 }
 
 console.log(corsOptions)
 app.use(cors(corsOptions))
-
 
 app.use(express.json());
 app.use(bodyParser.json());

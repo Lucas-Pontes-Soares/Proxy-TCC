@@ -2,9 +2,9 @@ const fetch = require('node-fetch');
 const dotenv = require('dotenv');
 dotenv.config();
 
-module.exports = findGetPlayerGamesProxy = async(req, res) => {
+module.exports = PSfindGetUserTitlesProxy = async(req, res) => {
     try {
-        let dados = await fetch(`${process.env.URLBackend}/steam/findGetPlayerGames/Userid/${req.params.UserId}/${req.params.page}`, {
+        let dados = await fetch(`${process.env.URLBackend}/ps/findGetUserTitles/${req.params.userName}`, {
             method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'
@@ -15,5 +15,4 @@ module.exports = findGetPlayerGamesProxy = async(req, res) => {
     } catch (error) {
         console.log("erro " + error)
     }
-
 }
