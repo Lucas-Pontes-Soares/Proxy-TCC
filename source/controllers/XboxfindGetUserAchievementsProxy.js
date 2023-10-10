@@ -11,7 +11,7 @@ module.exports = XboxfindGetUserAchievementsProxy = async(req, res) => {
                 },
         }) 
         dados = await dados.json()
-        res.json({success: true, message: dados});
+        res.json({success: true, message: dados.message});
     } catch (error) {
         console.log("erro " + error)
     }
