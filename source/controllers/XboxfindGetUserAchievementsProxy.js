@@ -3,11 +3,13 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 module.exports = XboxfindGetUserAchievementsProxy = async(req, res) => {
+    console.log(req.headers.limit)
     try {
         let dados = await fetch(`${process.env.URLBackend}/xbox/findGetUserAchievements/${req.params.loginId}`, {
             method: 'GET',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    limit: req.headers.limit
                 },
         }) 
         dados = await dados.json()
