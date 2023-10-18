@@ -8,7 +8,8 @@ module.exports = XboxfindGetUserAchievementsProxy = async(req, res) => {
         let dados = await fetch(`${process.env.URLBackend}/xbox/findGetUserAchievements/${req.params.loginId}`, {
             method: 'GET',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                     limit: req.headers.limit
                 },
         }) 
         dados = await dados.json()
